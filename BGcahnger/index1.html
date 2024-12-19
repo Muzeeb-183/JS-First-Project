@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: gray;
+            height: 100vh;
+            width: 100vw;
+        }
+        h1{
+            text-align: center;
+        }
+        section{
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        section .btn{
+            border: 2px solid black;
+            padding: 50px;
+        }
+        #gold{
+            background-color: gold;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        #red{
+            background-color: red;
+        }
+        #crimson{
+            background-color: crimson;
+        }
+
+    </style>
+    <title>BG changer</title>
+</head>
+<body>
+    <header>
+        <h1>Background Color</h1>
+    </header>
+    <section>
+        <div class="btn" id="gold">Gold</div>
+        <div class="btn" id="blue">Blue</div>
+        <div class="btn" id="green">Green</div>
+        <div class="btn" id="crimson">crimson</div>
+        <div class="btn" id="red">Red</div>
+    </section>
+    <script>
+        console.log(document);
+        let body = document.body;
+        console.log(body);
+        // let btns = document.querySelectorAll('.btn');
+        // console.log(btns);
+                    // own try
+        body.addEventListener('click',(e)=>{
+            // console.log(e.target.id);
+            if(e.target.id === 'gold'){
+                body.style.backgroundColor = 'gold';
+            }
+            else if(e.target.id === 'blue'){
+                body.style.backgroundColor = 'blue';
+            }
+            else if(e.target.id === 'green'){
+                body.style.backgroundColor = 'green';
+            }
+            else if(e.target.id === 'crimson'){
+                body.style.backgroundColor = 'crimson';
+            }
+            else if(e.target.id === 'red'){
+                body.style.backgroundColor = 'red';
+            }
+        })        
+
+        // btns.forEach((bt)=>{
+        //     bt.addEventListener('click',e=>{
+        //         if(e.target.id === 'gold'){
+        //             body.style.backgroundColor = 'gold';
+        //         }
+        //         else if(e.target.id === 'blue'){
+        //             body.style.backgroundColor ='blue';
+        //         }
+        //     })
+        // })
+    </script>
+</body>
+</html>
